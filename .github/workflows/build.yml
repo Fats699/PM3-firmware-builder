@@ -53,7 +53,7 @@ jobs:
           python checksum.py
 
       - name: Upload firmware
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: firmware_${{ matrix.ref }}_${{ matrix.standalone }}
           path: |
