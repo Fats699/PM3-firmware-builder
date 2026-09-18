@@ -11,7 +11,7 @@ jobs:
       standalones: ${{ steps.load_step.outputs.standalones }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - id: load_step
         name: Load Config
@@ -31,7 +31,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Install dependencies
         run: |
@@ -53,7 +53,7 @@ jobs:
           python checksum.py
 
       - name: Upload firmware
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: firmware_${{ matrix.ref }}_${{ matrix.standalone }}
           path: |
