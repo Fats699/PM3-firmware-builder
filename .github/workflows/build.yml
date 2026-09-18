@@ -11,7 +11,7 @@ jobs:
       standalones: ${{ steps.load_step.outputs.standalones }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@4
 
       - id: load_step
         name: Load Config
@@ -31,7 +31,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install dependencies
         run: |
